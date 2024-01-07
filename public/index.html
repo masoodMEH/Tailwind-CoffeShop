@@ -39,6 +39,10 @@
         <path stroke-linecap="round" stroke-linejoin="round"
               d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"/>
     </symbol>
+    <symbol id="chevron-left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
+    </symbol>
 
 
 </svg>
@@ -89,17 +93,33 @@
             <!-- Cart Icon & Theme Switch Btn -->
             <div class="flex items-center gap-x-5">
                 <!-- Cart -->
-                <div>
+                <div class="relative group">
                     <!-- cart icon hover -->
-                    <div class="py-3">
+                    <div class="py-3 cursor-pointer">
                         <!--cart icon hover-->
                         <svg class="w-8 h-8">
                             <use xlink:href="#shopping-cart"></use>
                         </svg>
                     </div>
                     <!-- cart box -->
+                    <div class="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible w-[400px] p-5 bg-white dark:text-zinc-700 border-t-[3px] border-t-orange-300 shadow-normal rounded-2xl transition-all">
+                        <!-- cart header -->
+                        <div class="flex items-center justify-between tracking-tighter font-DanaMedium text-xs">
+                            <span class="text-gray-300 ">1 مورد</span>
+                            <a href="" class="flex items-center text-orange-300">
+                                مشاهده سبد خرید
+                                <svg class="w-4 h-4">
+                                    <use href="#chevron-left"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- cart body -->
+                        <div>
 
-                    <div></div>
+                        </div>
+                        <!-- cart footer -->
+                        <div></div>
+                    </div>
                 </div>
                 <!-- Switch Icon -->
                 <div class="cursor-pointer" id="toggle-theme">

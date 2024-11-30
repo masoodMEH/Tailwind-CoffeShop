@@ -7,17 +7,6 @@
     <title>Document</title>
     <link href="./styles/app.css" rel="stylesheet" />
     <link rel="icon" href="images/fav-icon.png" />
-    <script type="text/javascript">
-        if (
-            localStorage.theme === "dark" ||
-            (!("theme" in localStorage) &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-    </script>
 </head>
 
 <body class="font-Dana bg-gray-100 dark:bg-zinc-800">
@@ -276,14 +265,15 @@
 
     <div class="flex md:hidden items-center justify-between px-4 h-16 bg-white dark:bg-zinc-700">
         <!-- Nav icon -->
-        <div>
+        <div class="nav-icon">
             <svg class="w-6 h-6 text-zinc-700 dark:text-white">
                 <use href="#bars-3"></use>
             </svg>
         </div>
 
         <!-- Nav -->
-        <div class="fixed top-0 bottom-0 right-0 w-64 min-h-screen pt-3 px-4 bg-white dark:bg-zinc-700 z-20">
+        <div
+            class="nav fixed top-0 bottom-0 -right-64 w-64 min-h-screen overflow-y-auto pt-3 px-4 bg-white dark:bg-zinc-700 z-20 transition-all">
             <!-- Nav Header -->
             <div class="flex items-center justify-between pb-5 mb-6 border-b border-b-gray-100 dark:border-b-white/10">
                 <div class="flex gap-x-3.5">
@@ -294,9 +284,11 @@
                         <use href="#logo-type"></use>
                     </svg>
                 </div>
-                <svg class="w-5 h-5 text-zinc-600 dark:text-white">
-                    <use href="#x-mark"></use>
-                </svg>
+                <div class="nav-close-btn">
+                    <svg class="w-5 h-5 text-zinc-600 dark:text-white">
+                        <use href="#x-mark"></use>
+                    </svg>
+                </div>
             </div>
 
             <!-- Nav Menu -->
@@ -317,7 +309,7 @@
                             </svg>
                             فروشگاه
                         </a>
-                        <span id="submenu-open-btn">
+                        <span class="submenu-open-btn">
                             <svg class="w-4 h-4">
                                 <use xlink:href="#chevron-down"></use>
                             </svg>
@@ -370,8 +362,9 @@
                 </li>
             </ul>
 
+            <!-- Nav Footer -->
             <div
-                class="flex flex-col items-start gap-y-6 text-orange-300 pt-8 px-2.5 mt-8 border-t border-t-gray-100 dark:border-b-white/10">
+                class="flex flex-col items-start gap-y-6 text-orange-300 py-8 px-2.5 mt-8 border-t border-t-gray-100 dark:border-b-white/10">
                 <a href="" class="inline-flex items-center gap-x-2 ">
                     <svg class="w-5 h-5 text-orange-300 rotate-180">
                         <use href="#arrow-left-end-on-rectangle"></use>
@@ -417,9 +410,9 @@
         </div>
     </div>
 
-    <div class="overlay md:hidden fixed bg-black/40 inset-0 w-full h-full z-10"></div>
+    <div class="overlay "></div>
 
-    <script src=" scripts/app.js">
+    <script src="scripts/app.js">
     </script>
 </body>
 

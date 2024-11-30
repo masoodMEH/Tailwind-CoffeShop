@@ -122,10 +122,6 @@
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
         </symbol>
-
-
-
-
     </svg>
 
     <header
@@ -313,18 +309,28 @@
                 </a>
             </div>
             <ul class="child:pr-2.5 space-y-6 dark:text-white text-zinc-600">
-                <li class="flex items-center justify-between">
-                    <a href="" class="flex items-center gap-x-2">
-                        <svg class="w-5 h-5">
-                            <use xlink:href="#shopping-cart"></use>
-                        </svg>
-                        فروشگاه
-                    </a>
-                    <span>
-                        <svg class="w-4 h-4">
-                            <use xlink:href="#chevron-down"></use>
-                        </svg>
-                    </span>
+                <li>
+                    <div class="flex items-center justify-between">
+                        <a href="" class="flex items-center gap-x-2">
+                            <svg class="w-5 h-5">
+                                <use xlink:href="#shopping-cart"></use>
+                            </svg>
+                            فروشگاه
+                        </a>
+                        <span id="submenu-open-btn">
+                            <svg class="w-4 h-4">
+                                <use xlink:href="#chevron-down"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="submenu">
+                        <a href="#">قهوه ویژه</a>
+                        <a href="#" class="submenu__item--active">ویژه در سطح جهانی</a>
+                        <a href="#">قهوه درجه یک</a>
+                        <a href="#">ترکیبات تجاری</a>
+                        <a href="#">کپسول قهوه</a>
+                        <a href="#">قهوه زینو برزیلی</a>
+                    </div>
                 </li>
 
                 <li>

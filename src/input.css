@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ---- font dana ---- */
+  @font-face {
+    font-family: "Dana";
+    /* 400 */
+    src: local("Dana"),
+      url("../fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Dana Medium";
+    /* 500 */
+    src: local("Dana Medium"),
+      url("../fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Dana DemiBold";
+    /* 600 */
+    src: local("Dana DemiBold"),
+      url("../fonts/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  /* ---- font morabba ---- */
+  @font-face {
+    font-family: "Morabba Light";
+    src: local("Morabba Light"),
+      url("../fonts/Morabba/woff2/Morabba-Light.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Morabba Medium";
+    src: local("Morabba Medium"),
+      url("../fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Morabba Bold";
+    src: local("Morabba Bold"),
+      url("../fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  body {
+    background-image: url("../images/headerBgDesktop.webp");
+    background-repeat: no-repeat;
+  }
+}
+
+@layer components {
+  .submenu {
+    @apply hidden flex-col gap-y-3 pr-7 mt-3 text-sm text-zinc-600 dark:text-white;
+  }
+
+  .submenu--open {
+    @apply flex;
+  }
+
+  .submenu__item--active {
+    @apply relative text-orange-300 pr-2.5;
+  }
+
+  .submenu__item--active::after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100px;
+    position: absolute;
+    background-color: #fdbf74;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .overlay {
+    @apply md:hidden invisible opacity-0 fixed bg-black/40 inset-0 w-full h-full z-10 transition-all;
+  }
+
+  .overlay--visible {
+    @apply visible opacity-100;
+  }
+}

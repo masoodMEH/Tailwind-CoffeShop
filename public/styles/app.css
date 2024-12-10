@@ -747,6 +747,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -795,6 +799,10 @@ body {
   height: 2.5rem;
 }
 
+.h-11 {
+  height: 2.75rem;
+}
+
 .h-14 {
   height: 3.5rem;
 }
@@ -833,6 +841,10 @@ body {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-28 {
+  width: 7rem;
 }
 
 .w-30 {
@@ -893,6 +905,10 @@ body {
 
 .shrink-0 {
   flex-shrink: 0;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 .rotate-180 {
@@ -1098,11 +1114,6 @@ body {
   padding-bottom: 2rem;
 }
 
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1119,8 +1130,8 @@ body {
   padding-top: 0.75rem;
 }
 
-.pt-8 {
-  padding-top: 2rem;
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .font-Dana {
@@ -1239,10 +1250,6 @@ body {
   transition-delay: 300ms;
 }
 
-.duration-500 {
-  transition-duration: 500ms;
-}
-
 .hover\:bg-teal-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(15 118 110 / var(--tw-bg-opacity, 1));
@@ -1316,6 +1323,11 @@ body {
 .dark\:bg-emerald-500:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
+}
+
+.dark\:bg-teal-500:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity, 1));
 }
 
 .dark\:bg-zinc-700:is(.dark *) {
